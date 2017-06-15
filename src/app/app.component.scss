@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('../public/fonts/SFUIText-Light.eot');
+    src: url('../public/fonts/SFUIText-Light.eot?#iefix') format('embedded-opentype'),
+        url('../public/fonts/SFUIText-Light.woff') format('woff'),
+        url('../public/fonts/SFUIText-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('../public/fonts/SFUIText-Medium.eot');
+    src: url('../public/fonts/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../public/fonts/SFUIText-Medium.woff') format('woff'),
+        url('../public/fonts/SFUIText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'SF UI Text', sans-serif;
+    font-weight: 200;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 60rem;
+}
+
+home,
+component-one,
+component-two {
+    display: block;
+    position: absolute;
+    width: 100%;
+}
