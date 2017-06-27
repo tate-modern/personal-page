@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { Footer } from './components/footer/footer.component';
 import { NavBar } from './components/nav-bar/nav-bar.component';
 import { Home } from './components/home/home.component';
 import { ComponentOne } from './components/component-one/component-one.component';
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    Footer,
     NavBar,
     Home,
     ComponentOne,

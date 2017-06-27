@@ -1,3 +1,5 @@
+@import "../assets/styles/flexboxgrid";
+
 @font-face {
     font-family: 'SF UI Text';
     src: url('../public/fonts/SFUIText-Light.eot');
@@ -20,12 +22,32 @@
 
 * {
     box-sizing: border-box;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
 html {
     box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
 }
 
 *,
@@ -53,4 +75,23 @@ component-two {
     display: block;
     position: absolute;
     width: 100%;
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'SF UI Text', sans-serif;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 0;
 }

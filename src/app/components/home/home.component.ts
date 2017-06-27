@@ -11,4 +11,11 @@ import { fadeInAnimation } from '../../_animations/index';
     encapsulation: ViewEncapsulation.None
 })
 export class Home {
+
+	setDate() {
+		let firstYear = 2008;
+		let currentYear = new Date().getFullYear();
+		return currentYear - firstYear;
+	}
+
 }
