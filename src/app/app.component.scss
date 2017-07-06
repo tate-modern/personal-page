@@ -1,5 +1,8 @@
-@import "../assets/styles/flexboxgrid";
+// RESET + GRID
+@import "../../node_modules/furtive/scss/normalize";
+@import "../../node_modules/furtive/scss/grid";
 
+// TYPE
 @font-face {
     font-family: 'SF UI Text';
     src: url('../public/fonts/SFUIText-Light.eot');
@@ -18,17 +21,6 @@
         url('../public/fonts/SFUIText-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
-}
-
-* {
-    box-sizing: border-box;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    box-sizing: border-box;
 }
 
 html,
@@ -57,6 +49,7 @@ app-root {
 }
 
 body {
+    line-height: 1.5;
     font-family: 'SF UI Text', sans-serif;
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
