@@ -1,7 +1,3 @@
-// RESET + GRID
-@import "../../node_modules/furtive/scss/normalize";
-@import "../../node_modules/furtive/scss/grid";
-
 // TYPE
 @font-face {
     font-family: 'SF UI Text';
@@ -62,6 +58,7 @@ body {
     max-width: 60rem;
 }
 
+intro,
 home,
 component-one,
 component-two {

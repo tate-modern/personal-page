@@ -7,13 +7,13 @@ export const fadeInAnimation =
         transition(
             ':enter', [
               style({opacity: 0}),
-              animate('0.5s 1s ease-in', style({opacity: 1}))
+              animate('0.5s 1s ease-in-out', style({opacity: 1}))
             ]
         ),
         transition(
             ':leave', [
               style({'opacity': 1}),
-              animate('0.25s 0.25s ease-out', style({opacity: 0}))
+              animate('0.25s 0.25s ease-in-out', style({opacity: 0}))
             ]
         )
     ]);

@@ -1,0 +1,19 @@
+svg { 
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0; // needed for FF, Safari, Edge
+  height: 100%;
+}
+svg text {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 38px;
+}
+svg rect {
+  fill: white;
+}
+svg > rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}

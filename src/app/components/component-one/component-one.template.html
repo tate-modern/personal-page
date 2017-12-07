@@ -1,3 +1,89 @@
 <div class="container">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quisquam aliquid, id, soluta eum iusto deleniti! Qui dolorum enim, sed iste quis, illo culpa nisi quas mollitia sunt, laborum fugiat dolore eveniet sapiente placeat. Totam, rerum.</p>
+    <section
+        class="success"
+        *ngIf="isSubmitted">
+        <div class="check">
+            <i class="icon-check icon-24"></i>
+        </div>
+        <div class="success-message">
+            <h4>Success!</h4>
+            <p>Thank you for submitting this feedback. For problems or feature requests, we may contact you for more information.</p>
+        </div>
+    </section>
+
+    <div
+        class="close"
+        (click)="toggleFeedback()">
+        <i class="icon-close icon-12"></i>
+    </div>
+
+    <section
+        class="u-flex u-column u-maxY u-relative"
+        *ngIf="feedbackOpened">
+
+        <header class="header">
+            <h5 class="t-caps">Contact Us</h5>
+        </header>
+
+        <div
+            class="dropdown"
+            dropdown
+            autoClose="'always'">
+            <div
+                dropdownToggle
+                class="input u-centerY u-spaceBetweenX dropdown-toggle"
+                name="feedbackType"
+                type="text"
+                placeholder="Select Feedback Type">
+                <span
+                    class="selection"
+                    [ngClass]="{'no-selection': !feedbackType}">
+                    {{feedbackType || 'Select Feedback Type'}}
+                </span>
+            </div>
+            <ul
+                class="dropdown-menu"
+                *dropdownMenu>
+                <li *ngFor="let type of feedbackTypes">
+                    <a (click)="updateFeedbackType(type)">
+                        {{type.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <textarea
+            class="input textarea"
+            [(ngModel)]="feedbackBody">
+        </textarea>
+
+        <div class="actions">
+            <a
+                href="http://help-center.kargo.com.s3.amazonaws.com/Content/Glossary/Terms.htm"
+                target="_blank">
+                <p>View Terms Of Use</p>
+            </a>
+            <button
+                class="button button--primary"
+                (click)="sendFeedback()"
+                [disabled]="!entriesValid()">
+                <div class="u-maxX u-centerXY">
+                    <span>Send</span>
+                </div>
+            </button>
+        </div>
+
+        <footer class="footer">
+            <a
+                href="{{helpCenterUrl}}"
+                target="_blank">
+                <div class="button button--text">
+                    <div class="u-maxX u-centerXY">
+                        <span class="t-caps">Go to Help Center</span>
+                        <i class="icon-arrow-right icon-12"></i>
+                    </div>
+                </div>
+            </a>
+        </footer>
+    </section>
 </div>
