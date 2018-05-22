@@ -17,5 +17,4 @@ export class Intro {
     navigateToHome() {
         this.router.navigate(['home']);
     }
-
 }
